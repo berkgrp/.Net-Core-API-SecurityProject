@@ -75,6 +75,16 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "BusinessLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/BusinessLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BusinessLayer.dll": {}
+        }
       }
     }
   },
@@ -185,10 +195,16 @@
         "swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "BusinessLayer/1.0.0": {
+      "type": "project",
+      "path": "../BusinessLayer/BusinessLayer.csproj",
+      "msbuildProject": "../BusinessLayer/BusinessLayer.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "BusinessLayer >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
   },
@@ -198,11 +214,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\VisualStudioProjects\\.NetCore-API-SecurityProject\\NetCoreSecurityProject\\ApiProject\\ApiProject.csproj",
+      "projectUniqueName": "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\ApiProject\\ApiProject.csproj",
       "projectName": "ApiProject",
-      "projectPath": "C:\\Projects\\VisualStudioProjects\\.NetCore-API-SecurityProject\\NetCoreSecurityProject\\ApiProject\\ApiProject.csproj",
+      "projectPath": "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\ApiProject\\ApiProject.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\VisualStudioProjects\\.NetCore-API-SecurityProject\\NetCoreSecurityProject\\ApiProject\\obj\\",
+      "outputPath": "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\ApiProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -218,7 +234,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\BusinessLayer\\BusinessLayer.csproj": {
+              "projectPath": "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\BusinessLayer\\BusinessLayer.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
