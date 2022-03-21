@@ -1,6 +1,7 @@
 ﻿using DataAccessLayer;
 using EntityLayer;
 using System;
+using System.Threading.Tasks;
 using static DataAccesLayer.IRepository;
 
 namespace BusinessLayer
@@ -27,7 +28,18 @@ namespace BusinessLayer
             }
             catch (Exception ex)
             {
-                return 15;
+                return -1;
+            }
+        }
+        public async Task<int> CompleteAsync()
+        {
+            try
+            {
+                return await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                return -1;
             }
         }
         public void Dispose()

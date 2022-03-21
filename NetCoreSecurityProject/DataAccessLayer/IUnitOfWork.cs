@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using static DataAccesLayer.IRepository;
 
 namespace DataAccessLayer
@@ -8,5 +9,6 @@ namespace DataAccessLayer
         IRepository<T> Repository { get; }
         IRepositoryUser<T> RepositoryUser { get; }
         int Complete();
+        Task<int> CompleteAsync();
     }
 }

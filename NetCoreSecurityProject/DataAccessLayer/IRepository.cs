@@ -17,6 +17,7 @@ namespace DataAccesLayer
             T GetByID(int ID);
             void Update(T model);
             void Create(T model);
+            Task CreateAsync(T model);
             void Delete(T model);
             void DeleteID(int ID);
             T GetByEmail(string email);
@@ -104,6 +105,11 @@ namespace DataAccesLayer
             public async Task<IEnumerable<T>> GetAllAsync()
             {
                 return await _dbSet.AsNoTracking().ToListAsync();
+            }
+
+            public async Task CreateAsync(T model)
+            {
+                await _dbSet.AddAsync(model);
             }
 
             public ApiDbContext ApiDbContext { get { return _context as ApiDbContext; } }
