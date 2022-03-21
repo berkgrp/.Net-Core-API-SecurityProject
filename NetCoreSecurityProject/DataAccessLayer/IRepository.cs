@@ -12,6 +12,8 @@ namespace DataAccesLayer
         public interface IRepository<T> where T : class
         {
             IEnumerable<T> GetAll();
+            IEnumerable<T> GetAllAsNoTracing();
+            Task<IEnumerable<T>> GetAllAsync();
             T GetByID(int ID);
             void Update(T model);
             void Create(T model);
@@ -22,9 +24,9 @@ namespace DataAccesLayer
         }
         public class Repository<T> : IRepository<T> where T : class
         {
-            protected KartOyunuDBContext _context;
+            protected ApiDbContext _context;
             private readonly DbSet<T> _dbSet;
-            public Repository(KartOyunuDBContext context)
+            public Repository(ApiDbContext context)
             {
                 this._context = context ?? throw new ArgumentNullException("dbContext can not be null.");
                 _dbSet = _context.Set<T>();
@@ -99,7 +101,12 @@ namespace DataAccesLayer
                 return Task.CompletedTask;
             }
 
-            public KartOyunuDBContext KartOyunuDBContext { get { return _context as KartOyunuDBContext; } }
+            public async Task<IEnumerable<T>> GetAllAsync()
+            {
+                return await _dbSet.AsNoTracking().ToListAsync();
+            }
+
+            public ApiDbContext ApiDbContext { get { return _context as ApiDbContext; } }
         }
 
     }

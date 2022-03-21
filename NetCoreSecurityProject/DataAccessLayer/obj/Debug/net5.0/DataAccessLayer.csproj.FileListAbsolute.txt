@@ -1,0 +1,5 @@
+C:\Users\Berk.Net\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\Berk.Net\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Berk.Net\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\Berk.Net\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\Berk.Net\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csproj.CoreCompileInputs.cache

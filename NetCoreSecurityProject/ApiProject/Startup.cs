@@ -1,3 +1,6 @@
+using BusinessLayer;
+using DataAccessLayer;
+using EntityLayer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -19,7 +22,8 @@ namespace ApiProject
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddScoped(typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
+            services.AddDbContext<ApiDbContext>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
