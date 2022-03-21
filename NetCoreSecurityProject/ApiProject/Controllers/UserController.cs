@@ -29,8 +29,16 @@ namespace ApiProject.Controllers
         }
         #endregion
 
-        #region /*Post*/
-        [HttpPost]
+        #region /*GetByID*/
+        [HttpGet("{id}")]
+        public async Task<User> Get(int id)
+        {
+            return await _unitOfWorkUser.RepositoryUser.GetByIDAsync(id);
+        }
+        #endregion
+
+        #region /*Update*/
+        [HttpPut]
         public async Task<string> Post(User user)
         {
             string responseMessage;
@@ -38,7 +46,7 @@ namespace ApiProject.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    await _unitOfWorkUser.RepositoryUser.CreateAsync(user);
+                    await _unitOfWorkUser.RepositoryUser.UpdateAsync(user);
                     await _unitOfWorkUser.CompleteAsync();
                     return responseMessage = "Success";
                 }

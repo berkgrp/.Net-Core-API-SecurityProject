@@ -15,6 +15,7 @@ namespace DataAccesLayer
             IEnumerable<T> GetAllAsNoTracing();
             Task<IEnumerable<T>> GetAllAsync();
             T GetByID(int ID);
+            Task<T> GetByIDAsync(int ID);
             void Update(T model);
             void Create(T model);
             Task CreateAsync(T model);
@@ -110,6 +111,11 @@ namespace DataAccesLayer
             public async Task CreateAsync(T model)
             {
                 await _dbSet.AddAsync(model);
+            }
+
+            public async Task<T> GetByIDAsync(int ID)
+            {
+                return await _dbSet.FindAsync(ID);
             }
 
             public ApiDbContext ApiDbContext { get { return _context as ApiDbContext; } }
