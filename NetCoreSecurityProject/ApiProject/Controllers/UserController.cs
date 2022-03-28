@@ -3,6 +3,7 @@ using DataAccessLayer;
 using EntityLayer.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace ApiProject.Controllers
@@ -52,27 +53,28 @@ namespace ApiProject.Controllers
 
         #region /*GetByID*/
         [HttpGet("{id}")]
-        public async Task<ActionResult> Get(int id)
+        public async Task<ActionResult> Get(Guid id)
         {
             try
             {
                 var isUserExist = await _unitOfWorkUser.RepositoryUser.IsUserExist(id);
                 if (isUserExist.Count != 0)
                 {
-                    return Ok(new CustomOk(true, "Success", await _unitOfWorkUser.RepositoryUser.GetByIDAsync(id)));
+                    return Ok(new CustomOk(true, "Success",
+                        await _unitOfWorkUser.RepositoryUser.GetByIDAsync(isUserExist.ElementAt(0).UserID)));
                 }
                 else
                 {
                     return BadRequest(new CustomBadRequest(false, "There is no such a user like that!", "nullObject"));
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Log log = new()
                 {
                     LogDescription = "try-catch " + ex.Message,
                     LogType = "try-catch",
-                    TableID = "api/Users/Get/"+id.ToString(),
+                    TableID = "api/Users/Get/" + id.ToString(),
                     TableName = "User",
                     CreatedTime = DateTime.Now
                 };

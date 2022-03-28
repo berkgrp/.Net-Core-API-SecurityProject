@@ -4,6 +4,7 @@ using CORE_HBKSOFTWARE.Interfaces;
 using DataAccessLayer;
 using Entities_HBKSOFTWARE.JwtModels;
 using EntityLayer.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -15,6 +16,7 @@ using System.Threading.Tasks;
 
 namespace ApiProject.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class AccountController : ControllerBase
@@ -25,7 +27,6 @@ namespace ApiProject.Controllers
         private readonly IUnitOfWork<Log> _unitOfWorkLog;
         private readonly IPasswordHashing _passwordHashing;
         private readonly ISlugCreator _slugCreator;
-        private readonly ITokenGenerator _tokenGenerator;
 
         private readonly JWTSettings _jwtSettings;
         #endregion
@@ -36,7 +37,6 @@ namespace ApiProject.Controllers
             IUnitOfWork<Log> unitOfWorkLog,
             IPasswordHashing passwordHashing,
             ISlugCreator slugCreator,
-            ITokenGenerator tokenGenerator,
             JWTSettings jwtSettings)
         {
             _unitOfWorkUser = unitOfWorkUser;
@@ -45,18 +45,15 @@ namespace ApiProject.Controllers
             _jwtSettings = jwtSettings;
             _passwordHashing = passwordHashing;
             _slugCreator = slugCreator;
-            _tokenGenerator = tokenGenerator;
         }
         #endregion
 
         #region /*Login*/
-        // POST: /api/Account/Login
         [HttpPost("Login")]
-        public async Task<ActionResult<UserWithToken>> Login([FromBody] LoginViewModel loginViewModel)
+        public async Task<ActionResult> Login([FromBody] LoginViewModel loginViewModel)
         {
             try
             {
-                UserWithToken userWithToken = new();
                 var user = await _unitOfWorkUser.RepositoryUser.GetUserForLogin(loginViewModel.UserEMail);
                 if (user != null)
                 {
@@ -67,6 +64,7 @@ namespace ApiProject.Controllers
                         await _unitOfWorkRefreshToken.RepositoryRefreshToken.CreateAsync(refreshToken);//Token burda db'ye kaydediliyor, daha sonra çağrılmak üzere.
                         await _unitOfWorkUser.CompleteAsync();
 
+                        UserWithToken userWithToken = new();
                         userWithToken.AccessToken = GenerateAccessToken(user.UserID);//Bearer Access Token burada üretiliyor.
                         userWithToken.RefreshToken = refreshToken.Token;
                         userWithToken.UserID = user.UserID;
@@ -74,12 +72,12 @@ namespace ApiProject.Controllers
                     }
                     else
                     {
-                        return Ok(new CustomOk(false, "Your E-mail address or password is incorrect!", userWithToken));
+                        return Ok(new CustomOk(false, "Your E-mail address or password is incorrect!", "nullObject"));
                     }
                 }
                 else
                 {
-                    return Ok(new CustomOk(false, "Your E-mail address or password is incorrect!", userWithToken));
+                    return Ok(new CustomOk(false, "Your E-mail address or password is incorrect!", "nullObject"));
                 }
             }
             catch (Exception ex)
@@ -90,7 +88,7 @@ namespace ApiProject.Controllers
                     LogType = "try-catch",
                     TableID = "api/Account/Login",
                     TableName = "User",
-                    CreatedTime=DateTime.Now
+                    CreatedTime = DateTime.Now
                 };
                 await _unitOfWorkLog.RepositoryLog.CreateAsync(log);
                 await _unitOfWorkLog.CompleteAsync();
@@ -100,7 +98,6 @@ namespace ApiProject.Controllers
         #endregion
 
         #region /*Register*/
-        // POST: /api/Account/Register
         [HttpPost("Register")]
         public async Task<ActionResult> Register([FromBody] RegisterViewModel registerViewModel)
         {
@@ -147,7 +144,6 @@ namespace ApiProject.Controllers
         #endregion
 
         #region /*RefreshToken*/
-        // POST: /api/Account/RefreshToken
         [HttpPost("RefreshToken")]
         public async Task<ActionResult<UserWithToken>> RefreshToken([FromBody] RefreshRequest refreshRequest)
         {

@@ -1,15 +1,25 @@
 ﻿using Entities_HBKSOFTWARE.JwtModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EntityLayer.Models
 {
     public class User
     {
+        public User()
+        {
+            UserGuidID = Guid.NewGuid();
+        }
+
         [Key]
         public int UserID { get; set; }
+
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid UserGuidID { get; set; }
 
         [Required(ErrorMessage = "This field is required.")]
         public string UserName { get; set; }
@@ -20,7 +30,8 @@ namespace EntityLayer.Models
         [Required(ErrorMessage = "This field is required.")]
         public string UserPassword { get; set; }
 
-        [EmailAddress(ErrorMessage ="Please enter a valid email."),Required(ErrorMessage = "This field is required.")]
+        [EmailAddress(ErrorMessage = "Please enter a valid email.")]
+        [Required(ErrorMessage = "This field is required.")]
         public string UserEmail { get; set; }
 
         public virtual List<RefreshToken> RefreshTokens { get; set; }

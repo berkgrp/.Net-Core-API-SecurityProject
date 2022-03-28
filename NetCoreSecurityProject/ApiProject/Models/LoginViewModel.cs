@@ -5,11 +5,11 @@ namespace ApiProject.Models
     public class LoginViewModel
     {
 
-        [DataType(DataType.EmailAddress)]
+        [Required(ErrorMessage = "This field is required.")]
+        [EmailAddress(ErrorMessage ="Please enter a valid email address.")]
         public string UserEMail { get; set; }
 
-        [Required]
-        [DataType(DataType.Password)]
+        [Required(ErrorMessage="This field is required."),DataType(DataType.Password)]
         public string UserPassword { get; set; }
     }
 }
