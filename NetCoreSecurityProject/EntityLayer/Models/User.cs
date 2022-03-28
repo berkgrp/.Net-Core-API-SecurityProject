@@ -1,5 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Entities_HBKSOFTWARE.JwtModels;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace EntityLayer.Models
@@ -20,6 +22,8 @@ namespace EntityLayer.Models
 
         [EmailAddress(ErrorMessage ="Please enter a valid email."),Required(ErrorMessage = "This field is required.")]
         public string UserEmail { get; set; }
+
+        public virtual List<RefreshToken> RefreshTokens { get; set; }
     }
 
     public class UserConfiguration : IEntityTypeConfiguration<User>

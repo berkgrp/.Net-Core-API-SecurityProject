@@ -8,6 +8,8 @@ namespace DataAccessLayer
     {
         IRepository<T> Repository { get; }
         IRepositoryUser<T> RepositoryUser { get; }
+        IRepositoryRefreshToken<T> RepositoryRefreshToken { get; }
+        IRepositoryLog<T> RepositoryLog { get; }
         int Complete();
         Task<int> CompleteAsync();
     }

@@ -15,10 +15,14 @@ namespace BusinessLayer
             _context = context;
             Repository = new Repository<T>(_context);
             RepositoryUser = new RepositoryUser<T>(_context);
+            RepositoryLog = new RepositoryLog<T>(_context);
+            RepositoryRefreshToken = new RepositoryRefreshToken<T>(_context);
 
         }
         public IRepository<T> Repository { get; private set; }
         public IRepositoryUser<T> RepositoryUser { get; private set; }
+        public IRepositoryLog<T> RepositoryLog { get; private set; }
+        public IRepositoryRefreshToken<T> RepositoryRefreshToken { get; private set; }
 
         public int Complete()
         {

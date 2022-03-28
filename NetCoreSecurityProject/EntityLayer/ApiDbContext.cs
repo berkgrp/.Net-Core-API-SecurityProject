@@ -1,4 +1,5 @@
-﻿using EntityLayer.Models;
+﻿using Entities_HBKSOFTWARE.JwtModels;
+using EntityLayer.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace EntityLayer
@@ -10,6 +11,7 @@ namespace EntityLayer
 
         #region /*DbClasses*/
         public DbSet<User> Users { get; set; }
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
         #endregion
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -19,6 +21,7 @@ namespace EntityLayer
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new UserConfiguration());
+            modelBuilder.ApplyConfiguration(new RefreshTokenConfiguration());
         }
     }
 }

@@ -3,3 +3,13 @@ C:\Users\Berk.Net\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurity
 C:\Users\Berk.Net\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfoInputs.cache
 C:\Users\Berk.Net\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfo.cs
 C:\Users\Berk.Net\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Berk.Net\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.deps.json
+C:\Users\Berk.Net\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.dll
+C:\Users\Berk.Net\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.pdb
+C:\Users\Berk.Net\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\DataAccessLayer\bin\Debug\net5.0\EntityLayer.dll
+C:\Users\Berk.Net\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\DataAccessLayer\bin\Debug\net5.0\EntityLayer.pdb
+C:\Users\Berk.Net\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csproj.CopyComplete
+C:\Users\Berk.Net\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.dll
+C:\Users\Berk.Net\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\DataAccessLayer\obj\Debug\net5.0\refint\DataAccessLayer.dll
+C:\Users\Berk.Net\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.pdb
+C:\Users\Berk.Net\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\DataAccessLayer\obj\Debug\net5.0\ref\DataAccessLayer.dll

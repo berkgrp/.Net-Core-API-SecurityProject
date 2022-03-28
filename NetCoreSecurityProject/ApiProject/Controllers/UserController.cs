@@ -13,12 +13,15 @@ namespace ApiProject.Controllers
     {
         #region /*IoC*/
         private readonly IUnitOfWork<User> _unitOfWorkUser;
+        private readonly IUnitOfWork<Log> _unitOfWorkLog;
         #endregion
 
         #region /*ctor*/
-        public UserController(IUnitOfWork<User> unitOfWorkUser)
+        public UserController(IUnitOfWork<User> unitOfWorkUser,
+            IUnitOfWork<Log> unitOfWorkLog)
         {
             _unitOfWorkUser = unitOfWorkUser;
+            _unitOfWorkLog = unitOfWorkLog;
         }
         #endregion
 
@@ -28,11 +31,21 @@ namespace ApiProject.Controllers
         {
             try
             {
-                return Ok(new CustomOk(true,"Success", await _unitOfWorkUser.RepositoryUser.GetAllAsync()));
+                return Ok(new CustomOk(true, "Success", await _unitOfWorkUser.RepositoryUser.GetAllAsync()));
             }
             catch (Exception ex)
             {
-                return NotFound(new CustomInternalServerError(false, ex.Message, "nullObject"));
+                Log log = new()
+                {
+                    LogDescription = "try-catch " + ex.Message,
+                    LogType = "try-catch",
+                    TableID = "api/Users/Get",
+                    TableName = "User",
+                    CreatedTime = DateTime.Now
+                };
+                await _unitOfWorkLog.RepositoryLog.CreateAsync(log);
+                await _unitOfWorkLog.CompleteAsync();
+                return NotFound(new CustomInternalServerError(false, "try-catch " + ex.Message, "nullObject"));
             }
         }
         #endregion
@@ -41,14 +54,31 @@ namespace ApiProject.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult> Get(int id)
         {
-            var isUserExist = await _unitOfWorkUser.RepositoryUser.IsUserExist(id);
-            if (isUserExist.Count != 0)
+            try
             {
-                return Ok(new CustomOk(true, "Success", await _unitOfWorkUser.RepositoryUser.GetByIDAsync(id)));
+                var isUserExist = await _unitOfWorkUser.RepositoryUser.IsUserExist(id);
+                if (isUserExist.Count != 0)
+                {
+                    return Ok(new CustomOk(true, "Success", await _unitOfWorkUser.RepositoryUser.GetByIDAsync(id)));
+                }
+                else
+                {
+                    return BadRequest(new CustomBadRequest(false, "There is no such a user like that!", "nullObject"));
+                }
             }
-            else
+            catch(Exception ex)
             {
-                return BadRequest(new CustomBadRequest(false, "There is no such a user like that!", "nullObject"));
+                Log log = new()
+                {
+                    LogDescription = "try-catch " + ex.Message,
+                    LogType = "try-catch",
+                    TableID = "api/Users/Get/"+id.ToString(),
+                    TableName = "User",
+                    CreatedTime = DateTime.Now
+                };
+                await _unitOfWorkLog.RepositoryLog.CreateAsync(log);
+                await _unitOfWorkLog.CompleteAsync();
+                return NotFound(new CustomInternalServerError(false, "try-catch " + ex.Message, "nullObject"));
             }
         }
         #endregion
@@ -65,7 +95,17 @@ namespace ApiProject.Controllers
             }
             catch (System.Exception ex)
             {
-                return NotFound(new CustomBadRequest(false, ex.Message, "nullObject"));
+                Log log = new()
+                {
+                    LogDescription = "try-catch " + ex.Message,
+                    LogType = "try-catch",
+                    TableID = "api/Users/Post",
+                    TableName = "User",
+                    CreatedTime = DateTime.Now
+                };
+                await _unitOfWorkLog.RepositoryLog.CreateAsync(log);
+                await _unitOfWorkLog.CompleteAsync();
+                return NotFound(new CustomInternalServerError(false, "try-catch " + ex.Message, "nullObject"));
             }
         }
         #endregion
@@ -82,7 +122,17 @@ namespace ApiProject.Controllers
             }
             catch (System.Exception ex)
             {
-                return NotFound(new CustomBadRequest(false, ex.Message, "nullObject"));
+                Log log = new()
+                {
+                    LogDescription = "try-catch " + ex.Message,
+                    LogType = "try-catch",
+                    TableID = "api/Users/Update",
+                    TableName = "User",
+                    CreatedTime = DateTime.Now
+                };
+                await _unitOfWorkLog.RepositoryLog.CreateAsync(log);
+                await _unitOfWorkLog.CompleteAsync();
+                return NotFound(new CustomInternalServerError(false, "try-catch " + ex.Message, "nullObject"));
             }
         }
         #endregion
