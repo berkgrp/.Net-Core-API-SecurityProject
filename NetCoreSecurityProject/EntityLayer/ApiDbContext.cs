@@ -7,9 +7,11 @@ namespace EntityLayer
     {
         public ApiDbContext(DbContextOptions<ApiDbContext> options) : base(options) { }
         public ApiDbContext() { }
+
         #region /*DbClasses*/
         public DbSet<User> Users { get; set; }
         #endregion
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Data Source=DESKTOP-Q7EGB25; Initial Catalog=ApiDb;Integrated Security=True;");

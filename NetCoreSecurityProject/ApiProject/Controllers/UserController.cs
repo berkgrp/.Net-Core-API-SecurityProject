@@ -1,7 +1,8 @@
-﻿using DataAccessLayer;
+﻿using ApiProject.ApiCustomResponse;
+using DataAccessLayer;
 using EntityLayer.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
+using System;
 using System.Threading.Tasks;
 
 namespace ApiProject.Controllers
@@ -23,41 +24,65 @@ namespace ApiProject.Controllers
 
         #region /*Get*/
         [HttpGet]
-        public async Task<IEnumerable<User>> Get()
+        public async Task<IActionResult> Get()
         {
-            return await _unitOfWorkUser.RepositoryUser.GetAllAsync();
+            try
+            {
+                return Ok(new CustomOk(true,"Success", await _unitOfWorkUser.RepositoryUser.GetAllAsync()));
+            }
+            catch (Exception ex)
+            {
+                return NotFound(new CustomInternalServerError(false, ex.Message, "nullObject"));
+            }
         }
         #endregion
 
         #region /*GetByID*/
         [HttpGet("{id}")]
-        public async Task<User> Get(int id)
+        public async Task<ActionResult> Get(int id)
         {
-            return await _unitOfWorkUser.RepositoryUser.GetByIDAsync(id);
+            var isUserExist = await _unitOfWorkUser.RepositoryUser.IsUserExist(id);
+            if (isUserExist.Count != 0)
+            {
+                return Ok(new CustomOk(true, "Success", await _unitOfWorkUser.RepositoryUser.GetByIDAsync(id)));
+            }
+            else
+            {
+                return BadRequest(new CustomBadRequest(false, "There is no such a user like that!", "nullObject"));
+            }
+        }
+        #endregion
+
+        #region /*Post*/
+        [HttpPost]
+        public async Task<ActionResult> Post([FromBody] User user)
+        {
+            try
+            {
+                await _unitOfWorkUser.RepositoryUser.CreateAsync(user);
+                await _unitOfWorkUser.CompleteAsync();
+                return Ok(new CustomOk(true, "Success", "nullObject"));
+            }
+            catch (System.Exception ex)
+            {
+                return NotFound(new CustomBadRequest(false, ex.Message, "nullObject"));
+            }
         }
         #endregion
 
         #region /*Update*/
         [HttpPut]
-        public async Task<string> Post(User user)
+        public async Task<ActionResult> Update([FromBody] User user)
         {
-            string responseMessage;
             try
             {
-                if (ModelState.IsValid)
-                {
-                    await _unitOfWorkUser.RepositoryUser.UpdateAsync(user);
-                    await _unitOfWorkUser.CompleteAsync();
-                    return responseMessage = "Success";
-                }
-                else
-                {
-                    return responseMessage = "Failed";
-                }
+                await _unitOfWorkUser.RepositoryUser.UpdateAsync(user);
+                await _unitOfWorkUser.CompleteAsync();
+                return Ok(new CustomOk(true, "Success", "nullObject"));
             }
             catch (System.Exception ex)
             {
-                return responseMessage = ex.Message;
+                return NotFound(new CustomBadRequest(false, ex.Message, "nullObject"));
             }
         }
         #endregion
