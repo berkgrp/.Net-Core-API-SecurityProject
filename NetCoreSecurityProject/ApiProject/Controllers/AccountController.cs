@@ -16,9 +16,9 @@ using System.Threading.Tasks;
 
 namespace ApiProject.Controllers
 {
-    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
+    [RequestSizeLimit(5242880)]
     public class AccountController : ControllerBase
     {
         #region /*IoC*/

@@ -1,6 +1,7 @@
 ﻿using ApiProject.ApiCustomResponse;
 using DataAccessLayer;
 using EntityLayer.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Linq;
@@ -8,8 +9,10 @@ using System.Threading.Tasks;
 
 namespace ApiProject.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("[controller]")]
+    [RequestSizeLimit(5242880)]
     public class UserController : ControllerBase
     {
         #region /*IoC*/
@@ -86,6 +89,7 @@ namespace ApiProject.Controllers
         #endregion
 
         #region /*Post*/
+        [RequestSizeLimit(5242880)]
         [HttpPost]
         public async Task<ActionResult> Post([FromBody] User user)
         {
@@ -114,6 +118,7 @@ namespace ApiProject.Controllers
 
         #region /*Update*/
         [HttpPut]
+        [RequestSizeLimit(5242880)]
         public async Task<ActionResult> Update([FromBody] User user)
         {
             try
