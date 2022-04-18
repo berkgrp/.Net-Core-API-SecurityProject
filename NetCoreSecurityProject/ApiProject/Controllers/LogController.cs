@@ -1,4 +1,5 @@
 ﻿using ApiProject.ApiCustomResponse;
+using ApiProject.Helpers;
 using DataAccessLayer;
 using EntityLayer.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -9,6 +10,7 @@ namespace ApiProject.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [ServiceFilter(typeof(PermissionFilter))]
     public class LogController : ControllerBase
     {
         #region /*IoC*/ 

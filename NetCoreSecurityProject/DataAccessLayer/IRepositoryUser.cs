@@ -15,6 +15,7 @@ namespace DataAccessLayer
         Task<User> GetUserForLogin(string email);
         Task<User> GetUserFromAccessToken(int userID);
         Task<User> GetAllUsersByEmailAndPhone(string email);
+        List<User> IsUserHasThatRole(int ID);
     }
     public class RepositoryUser<T> : Repository<User>, IRepositoryUser<T>
     {
@@ -26,7 +27,7 @@ namespace DataAccessLayer
                 .Select(x => new User
                 {
                     UserID = x.UserID,
-                    UserGuidID=x.UserGuidID
+                    UserGuidID = x.UserGuidID
                 }).AsNoTracking().ToListAsync();
         }
 
@@ -36,7 +37,7 @@ namespace DataAccessLayer
                 .Select(x => new User
                 {
                     UserID = x.UserID,
-                    UserGuidID=x.UserGuidID,
+                    UserGuidID = x.UserGuidID,
                     UserEmail = x.UserEmail,
                     UserPassword = x.UserPassword
                 }).AsNoTracking().FirstOrDefaultAsync();
@@ -56,6 +57,13 @@ namespace DataAccessLayer
                 {
                     UserID = x.UserID
                 }).AsNoTracking().FirstOrDefaultAsync();
+        }
+
+        public List<User> IsUserHasThatRole(int ID)
+        {
+            return  ApiDbContext.Users.Where(x => x.UserID == ID)
+                .Select(x => new User { UserRolesAsString = x.UserRolesAsString })
+                .AsNoTracking().ToList();
         }
     }
 }

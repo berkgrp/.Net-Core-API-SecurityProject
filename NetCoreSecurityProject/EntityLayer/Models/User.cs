@@ -1,6 +1,7 @@
 ﻿using Entities_HBKSOFTWARE.JwtModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -35,6 +36,8 @@ namespace EntityLayer.Models
         public string UserEmail { get; set; }
 
         public virtual List<RefreshToken> RefreshTokens { get; set; }
+
+        public List<string> UserRolesAsString { get; set; } = new List<string>();
     }
 
     public class UserConfiguration : IEntityTypeConfiguration<User>
@@ -42,6 +45,11 @@ namespace EntityLayer.Models
         public void Configure(EntityTypeBuilder<User> builder)
         {
             builder.HasKey(user => user.UserID);//Primary Key Yapılandırması
+
+            builder.Property(x => x.UserRolesAsString)
+                   .HasConversion(new ValueConverter<List<string>, string>(
+                    v => Newtonsoft.Json.JsonConvert.SerializeObject(v),
+                    v => Newtonsoft.Json.JsonConvert.DeserializeObject<List<string>>(v)));
 
             //Data Seeding
             builder.HasData(new User
