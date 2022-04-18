@@ -6131,8 +6131,8 @@
     },
     "CORE_HBKSOFTWARE/1.0.0": {
       "type": "project",
-      "path": "../../../../../Downloads/CORE_HBKSOFTWARE/CORE_HBKSOFTWARE.csproj",
-      "msbuildProject": "../../../../../Downloads/CORE_HBKSOFTWARE/CORE_HBKSOFTWARE.csproj"
+      "path": "../../../CORE_HBKSOFTWARE/CORE_HBKSOFTWARE.csproj",
+      "msbuildProject": "../../../CORE_HBKSOFTWARE/CORE_HBKSOFTWARE.csproj"
     },
     "DataAccessLayer/1.0.0": {
       "type": "project",
@@ -6155,19 +6155,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Berk.Net\\.nuget\\packages\\": {}
+    "C:\\Users\\Eda GARİP\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Berk.Net\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\ApiProject\\ApiProject.csproj",
+      "projectUniqueName": "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\ApiProject\\ApiProject.csproj",
       "projectName": "ApiProject",
-      "projectPath": "C:\\Users\\Berk.Net\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\ApiProject\\ApiProject.csproj",
-      "packagesPath": "C:\\Users\\Berk.Net\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Berk.Net\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\ApiProject\\obj\\",
+      "projectPath": "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\ApiProject\\ApiProject.csproj",
+      "packagesPath": "C:\\Users\\Eda GARİP\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\ApiProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Berk.Net\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Eda GARİP\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6181,11 +6181,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Berk.Net\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\BusinessLayer\\BusinessLayer.csproj": {
-              "projectPath": "C:\\Users\\Berk.Net\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\BusinessLayer\\BusinessLayer.csproj"
+            "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\BusinessLayer\\BusinessLayer.csproj": {
+              "projectPath": "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\BusinessLayer\\BusinessLayer.csproj"
             },
-            "C:\\Users\\Berk.Net\\Downloads\\CORE_HBKSOFTWARE\\CORE_HBKSOFTWARE.csproj": {
-              "projectPath": "C:\\Users\\Berk.Net\\Downloads\\CORE_HBKSOFTWARE\\CORE_HBKSOFTWARE.csproj"
+            "C:\\Users\\Eda GARİP\\Documents\\Github\\CORE_HBKSOFTWARE\\CORE_HBKSOFTWARE.csproj": {
+              "projectPath": "C:\\Users\\Eda GARİP\\Documents\\Github\\CORE_HBKSOFTWARE\\CORE_HBKSOFTWARE.csproj"
             }
           }
         }
@@ -6223,6 +6223,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[5.0.16, 5.0.16]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[5.0.0, 5.0.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -6231,7 +6249,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

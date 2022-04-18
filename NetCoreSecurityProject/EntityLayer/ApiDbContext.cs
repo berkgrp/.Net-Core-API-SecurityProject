@@ -11,6 +11,7 @@ namespace EntityLayer
 
         #region /*DbClasses*/
         public DbSet<User> Users { get; set; }
+        public DbSet<Log> Log { get; set; }
         public DbSet<RefreshToken> RefreshTokens { get; set; }
         #endregion
 

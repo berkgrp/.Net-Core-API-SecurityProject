@@ -1,4 +1,5 @@
 ﻿using ApiProject.ApiCustomResponse;
+using ApiProject.Helpers;
 using ApiProject.Models;
 using CORE_HBKSOFTWARE.Interfaces;
 using DataAccessLayer;
@@ -27,6 +28,7 @@ namespace ApiProject.Controllers
         private readonly IUnitOfWork<Log> _unitOfWorkLog;
         private readonly IPasswordHashing _passwordHashing;
         private readonly ISlugCreator _slugCreator;
+        private readonly ICipherService _cipherService;
 
         private readonly JWTSettings _jwtSettings;
         #endregion
@@ -37,7 +39,8 @@ namespace ApiProject.Controllers
             IUnitOfWork<Log> unitOfWorkLog,
             IPasswordHashing passwordHashing,
             ISlugCreator slugCreator,
-            JWTSettings jwtSettings)
+            JWTSettings jwtSettings,
+            ICipherService cipherService)
         {
             _unitOfWorkUser = unitOfWorkUser;
             _unitOfWorkRefreshToken = unitOfWorkRefreshToken;
@@ -45,6 +48,7 @@ namespace ApiProject.Controllers
             _jwtSettings = jwtSettings;
             _passwordHashing = passwordHashing;
             _slugCreator = slugCreator;
+            _cipherService = cipherService;
         }
         #endregion
 

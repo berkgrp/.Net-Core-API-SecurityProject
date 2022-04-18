@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Berk.Net\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\DataAccessLayer\\DataAccessLayer.csproj": {}
+    "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\DataAccessLayer\\DataAccessLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Berk.Net\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Berk.Net\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "C:\\Users\\Berk.Net\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\DataAccessLayer\\DataAccessLayer.csproj",
-        "packagesPath": "C:\\Users\\Berk.Net\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Berk.Net\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\DataAccessLayer\\obj\\",
+        "projectPath": "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\DataAccessLayer\\DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\Eda GARİP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Berk.Net\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Eda GARİP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Berk.Net\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\EntityLayer\\EntityLayer.csproj": {
-                "projectPath": "C:\\Users\\Berk.Net\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\EntityLayer\\EntityLayer.csproj"
+              "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\EntityLayer\\EntityLayer.csproj": {
+                "projectPath": "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\EntityLayer\\EntityLayer.csproj"
               }
             }
           }
@@ -59,26 +59,40 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Berk.Net\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\EntityLayer\\EntityLayer.csproj": {
+    "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\EntityLayer\\EntityLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Berk.Net\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\EntityLayer\\EntityLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\EntityLayer\\EntityLayer.csproj",
         "projectName": "EntityLayer",
-        "projectPath": "C:\\Users\\Berk.Net\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\EntityLayer\\EntityLayer.csproj",
-        "packagesPath": "C:\\Users\\Berk.Net\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Berk.Net\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\EntityLayer\\obj\\",
+        "projectPath": "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\EntityLayer\\EntityLayer.csproj",
+        "packagesPath": "C:\\Users\\Eda GARİP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\EntityLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Berk.Net\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Eda GARİP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -123,12 +137,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\Downloads\CORE_HBKSOFTWARE\CORE_HBKSOFTWARE.csproj" />
+    <ProjectReference Include="..\..\..\..\..\Documents\Github\CORE_HBKSOFTWARE\CORE_HBKSOFTWARE.csproj" />
     <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj" />
   </ItemGroup>
 

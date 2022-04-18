@@ -62,7 +62,7 @@ namespace ApiProject
             var appSettings = jwtSection.Get<JWTSettings>();
             var key = Encoding.ASCII.GetBytes(appSettings.SecretKey);
 
-
+            // Auth
             services.AddAuthentication(x =>
             {
                 x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -81,13 +81,25 @@ namespace ApiProject
                     ClockSkew = TimeSpan.Zero
                 };
             });
+            // Auth
 
             services.AddScoped(typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
             services.AddDbContext<ApiDbContext>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "SecurityProject", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "Web Application Security Lesson Project",
+                    Version = "v1",
+                    Description = "Berk Garip .Net-Core-ApiSecurity",
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Berk Garip",
+                        Email = "berkgarip24@gmail.com",
+                        Url = new Uri("https://github.com/berkgrp/.Net-Core-API-SecurityProject"),
+                    },
+                });
             });
         }
 
@@ -102,7 +114,7 @@ namespace ApiProject
             }
 
             app.UseHttpsRedirection();
-
+            app.UseIpRateLimiting();//Yapılan requestleri sınırlıyoruz
             app.UseRouting();
 
             app.UseAuthorization();

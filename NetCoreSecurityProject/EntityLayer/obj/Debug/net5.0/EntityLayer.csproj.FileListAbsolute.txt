@@ -10,3 +10,15 @@ C:\Users\Berk.Net\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurity
 C:\Users\Berk.Net\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\EntityLayer\obj\Debug\net5.0\refint\EntityLayer.dll
 C:\Users\Berk.Net\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\EntityLayer\obj\Debug\net5.0\EntityLayer.pdb
 C:\Users\Berk.Net\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\EntityLayer\obj\Debug\net5.0\ref\EntityLayer.dll
+C:\Users\Eda GARİP\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\EntityLayer\bin\Debug\net5.0\EntityLayer.deps.json
+C:\Users\Eda GARİP\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\EntityLayer\bin\Debug\net5.0\EntityLayer.dll
+C:\Users\Eda GARİP\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\EntityLayer\bin\Debug\net5.0\EntityLayer.pdb
+C:\Users\Eda GARİP\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\EntityLayer\obj\Debug\net5.0\EntityLayer.csproj.AssemblyReference.cache
+C:\Users\Eda GARİP\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\EntityLayer\obj\Debug\net5.0\EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eda GARİP\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\EntityLayer\obj\Debug\net5.0\EntityLayer.AssemblyInfoInputs.cache
+C:\Users\Eda GARİP\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\EntityLayer\obj\Debug\net5.0\EntityLayer.AssemblyInfo.cs
+C:\Users\Eda GARİP\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\EntityLayer\obj\Debug\net5.0\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\Eda GARİP\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\EntityLayer\obj\Debug\net5.0\EntityLayer.dll
+C:\Users\Eda GARİP\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\EntityLayer\obj\Debug\net5.0\refint\EntityLayer.dll
+C:\Users\Eda GARİP\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\EntityLayer\obj\Debug\net5.0\EntityLayer.pdb
+C:\Users\Eda GARİP\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\EntityLayer\obj\Debug\net5.0\ref\EntityLayer.dll
