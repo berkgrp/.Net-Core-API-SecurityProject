@@ -16,6 +16,8 @@ namespace ApiProject.Helpers
         }
         public void OnActionExecuting(ActionExecutingContext context)
         {
+            // to make it work out of that filter, they have to send the userID in the header of the request.
+            // when we get to userID of user, we are calling that HasValidRole function in this class.
             _ = int.TryParse(context.HttpContext.Request.Headers["UserId"].FirstOrDefault(), out int userId);
             string actionName = context.ActionDescriptor.RouteValues["action"];
             if (userId != 0 && !HasValidRole(userId, actionName))
@@ -30,13 +32,17 @@ namespace ApiProject.Helpers
         }
         public bool HasValidRole(int userId, string actionName)
         {
+            // this function is controlling that user has that role or not by using its userID.
+            // that query is calling the user of that userID. we are using select query because we just want
+            // that user's UserRolesAsString column.
             var user = _unitOfWorkUser.RepositoryUser.IsUserHasThatRole(userId);
-            if (user != null)
+            if (user.Count != 0) // because of .ToList(); action, we know that it can't be null.
             {
                 if (user.ElementAt(0).UserRolesAsString.Contains(actionName))
                 {
                     return true;
-                }else
+                }
+                else
                 {
                     return false;
                 }

@@ -5,7 +5,6 @@ using CORE_HBKSOFTWARE.Interfaces;
 using DataAccessLayer;
 using Entities_HBKSOFTWARE.JwtModels;
 using EntityLayer.Models;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -19,7 +18,7 @@ namespace ApiProject.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [RequestSizeLimit(5242880)]
+    [RequestSizeLimit(5242880)]//We are limiting the body size as kb
     public class AccountController : ControllerBase
     {
         #region /*IoC*/

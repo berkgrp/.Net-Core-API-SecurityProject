@@ -62,8 +62,11 @@ namespace DataAccessLayer
         public List<User> IsUserHasThatRole(int ID)
         {
             return  ApiDbContext.Users.Where(x => x.UserID == ID)
-                .Select(x => new User { UserRolesAsString = x.UserRolesAsString })
-                .AsNoTracking().ToList();
+                .Select(x => new User 
+                {
+                    UserRolesAsString = x.UserRolesAsString,
+                    UserID=x.UserID
+                }).AsNoTracking().ToList();
         }
     }
 }

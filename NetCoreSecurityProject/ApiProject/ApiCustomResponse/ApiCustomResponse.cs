@@ -4,6 +4,7 @@ namespace ApiProject.ApiCustomResponse
 {
     public class ApiCustomResponse
     {
+        // we are generating our custom response of that api.
         public int StatusCode { get; private set; }
 
         public string StatusDescription { get; private set; }

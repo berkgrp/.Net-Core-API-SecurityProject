@@ -9,7 +9,6 @@ namespace BusinessLayer
     public class UnitOfWork<T> : IUnitOfWork<T> where T : class
     {
         private readonly ApiDbContext _context;
-
         public UnitOfWork(ApiDbContext context)
         {
             _context = context;
@@ -17,7 +16,6 @@ namespace BusinessLayer
             RepositoryUser = new RepositoryUser<T>(_context);
             RepositoryLog = new RepositoryLog<T>(_context);
             RepositoryRefreshToken = new RepositoryRefreshToken<T>(_context);
-
         }
         public IRepository<T> Repository { get; private set; }
         public IRepositoryUser<T> RepositoryUser { get; private set; }

@@ -1,4 +1,5 @@
 ﻿using ApiProject.ApiCustomResponse;
+using ApiProject.Helpers;
 using DataAccessLayer;
 using EntityLayer.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -9,10 +10,11 @@ using System.Threading.Tasks;
 
 namespace ApiProject.Controllers
 {
-    [Authorize]
+    [Authorize]//Classic Auth Policies
     [ApiController]
     [Route("[controller]")]
-    [RequestSizeLimit(5242880)]
+    [RequestSizeLimit(5242880)]//We are limiting the body size as kb
+    [ServiceFilter(typeof(PermissionFilter))]//We are controlling that users permissions
     public class UserController : ControllerBase
     {
         #region /*IoC*/

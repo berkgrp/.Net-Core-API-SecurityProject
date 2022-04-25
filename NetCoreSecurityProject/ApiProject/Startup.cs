@@ -31,7 +31,7 @@ namespace ApiProject
         {
             services.AddMemoryCache();
 
-            //Yapılan requestleri sınırlıyoruz
+            // we are limiting of request count.
             services.Configure<IpRateLimitOptions>(options =>
             {
                 options.EnableEndpointRateLimiting = true;
@@ -114,7 +114,7 @@ namespace ApiProject
             }
 
             app.UseHttpsRedirection();
-            app.UseIpRateLimiting();//Yapılan requestleri sınırlıyoruz
+            app.UseIpRateLimiting();//to limit requests by count.
             app.UseRouting();
 
             app.UseAuthorization();

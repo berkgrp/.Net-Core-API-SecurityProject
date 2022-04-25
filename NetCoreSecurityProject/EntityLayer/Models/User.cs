@@ -59,6 +59,7 @@ namespace EntityLayer.Models
                 UserSurname = "Admin",
                 UserPassword = "AdminGitHub",
                 UserEmail = "AdminPaneli@gmail.com",
+                UserRolesAsString = { "Get" }
             });
             builder.HasData(new User
             {
@@ -67,6 +68,7 @@ namespace EntityLayer.Models
                 UserSurname = "Kullanici",
                 UserPassword = "KullaniciGitHub",
                 UserEmail = "Kullanici@gmail.com",
+                UserRolesAsString = { "Get" }
             });
         }
     }

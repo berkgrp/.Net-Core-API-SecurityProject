@@ -10,7 +10,7 @@ namespace ApiProject.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    [ServiceFilter(typeof(PermissionFilter))]
+    [ServiceFilter(typeof(PermissionFilter))]//We are controlling that users permissions
     public class LogController : ControllerBase
     {
         #region /*IoC*/ 
