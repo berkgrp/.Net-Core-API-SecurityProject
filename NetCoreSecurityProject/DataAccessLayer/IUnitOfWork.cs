@@ -10,6 +10,9 @@ namespace DataAccessLayer
         IRepositoryUser<T> RepositoryUser { get; }
         IRepositoryRefreshToken<T> RepositoryRefreshToken { get; }
         IRepositoryLog<T> RepositoryLog { get; }
+        IRepositoryRole<T> RepositoryRole { get; }
+        IRepositoryRoleGroup<T> RepositoryRoleGroup { get; }
+        IRepositoryUserRole<T> RepositoryUserRole { get; }
         int Complete();
         Task<int> CompleteAsync();
     }

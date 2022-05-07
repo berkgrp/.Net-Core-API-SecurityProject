@@ -1,11 +1,11 @@
 ﻿using ApiProject.ApiCustomResponse;
 using ApiProject.Helpers;
 using ApiProject.Models;
-using CORE_HBKSOFTWARE.Interfaces;
 using DataAccessLayer;
 using Entities_HBKSOFTWARE.JwtModels;
 using EntityLayer.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.IdentityModel.Tokens.Jwt;
@@ -25,28 +25,29 @@ namespace ApiProject.Controllers
         private readonly IUnitOfWork<User> _unitOfWorkUser;
         private readonly IUnitOfWork<RefreshToken> _unitOfWorkRefreshToken;
         private readonly IUnitOfWork<Log> _unitOfWorkLog;
-        private readonly IPasswordHashing _passwordHashing;
-        private readonly ISlugCreator _slugCreator;
+        private readonly IUnitOfWork<UserRole> _unitOfWorkUserRole;
+        private readonly IBiggerToLower _biggerToLower;
         private readonly ICipherService _cipherService;
 
         private readonly JWTSettings _jwtSettings;
+
         #endregion
 
         #region /*ctor*/
         public AccountController(IUnitOfWork<User> unitOfWorkUser,
             IUnitOfWork<RefreshToken> unitOfWorkRefreshToken,
             IUnitOfWork<Log> unitOfWorkLog,
-            IPasswordHashing passwordHashing,
-            ISlugCreator slugCreator,
-            JWTSettings jwtSettings,
+            IUnitOfWork<UserRole> unitOfWorkUserRole,
+            IBiggerToLower biggerToLower,
+            IOptions<JWTSettings> jwtSettings,
             ICipherService cipherService)
         {
             _unitOfWorkUser = unitOfWorkUser;
             _unitOfWorkRefreshToken = unitOfWorkRefreshToken;
             _unitOfWorkLog = unitOfWorkLog;
-            _jwtSettings = jwtSettings;
-            _passwordHashing = passwordHashing;
-            _slugCreator = slugCreator;
+            _unitOfWorkUserRole = unitOfWorkUserRole;
+            _jwtSettings = jwtSettings.Value;
+            _biggerToLower = biggerToLower;
             _cipherService = cipherService;
         }
         #endregion
@@ -60,22 +61,23 @@ namespace ApiProject.Controllers
                 var user = await _unitOfWorkUser.RepositoryUser.GetUserForLogin(loginViewModel.UserEMail);
                 if (user != null)
                 {
-                    if (_passwordHashing.PasswordCheck(user.UserPassword, loginViewModel.UserPassword))
+                    var encryptedPassword = _cipherService.Decrypt(user.UserPassword);
+                    if (encryptedPassword == loginViewModel.UserPassword)
                     {
-                        RefreshToken refreshToken = GenerateRefreshToken();//Token yenilemek için oluşturulan başka bir token.
+                        RefreshToken refreshToken = GenerateRefreshToken();
                         refreshToken.UserID = user.UserID;
-                        await _unitOfWorkRefreshToken.RepositoryRefreshToken.CreateAsync(refreshToken);//Token burda db'ye kaydediliyor, daha sonra çağrılmak üzere.
+                        await _unitOfWorkRefreshToken.RepositoryRefreshToken.CreateAsync(refreshToken);
                         await _unitOfWorkUser.CompleteAsync();
 
                         UserWithToken userWithToken = new();
-                        userWithToken.AccessToken = GenerateAccessToken(user.UserID);//Bearer Access Token burada üretiliyor.
+                        userWithToken.AccessToken = GenerateAccessToken(user.UserID);
                         userWithToken.RefreshToken = refreshToken.Token;
-                        userWithToken.UserID = user.UserID;
+                        userWithToken.UserGuidID = user.UserGuidID;
                         return Ok(new CustomOk(true, "No Error!", userWithToken));
                     }
                     else
                     {
-                        return Ok(new CustomOk(false, "Your E-mail address or password is incorrect!", "nullObject"));
+                        return Ok(new CustomOk(true, "No Error!", "nullObject"));
                     }
                 }
                 else
@@ -106,7 +108,7 @@ namespace ApiProject.Controllers
         {
             try
             {
-                registerViewModel.User.UserEmail = _slugCreator.CharacterReplacementBiggerToLower(registerViewModel.User.UserEmail);
+                registerViewModel.User.UserEmail = _biggerToLower.CharacterReplacementBiggerToLower(registerViewModel.User.UserEmail);
                 var user = await _unitOfWorkUser.RepositoryUser.GetAllUsersByEmailAndPhone(registerViewModel.User.UserEmail);
                 if (user != null)
                 {
@@ -120,11 +122,20 @@ namespace ApiProject.Controllers
                     }
                     else
                     {
-                        registerViewModel.User.UserPassword = _passwordHashing.PasswordHash(registerViewModel.User.UserPassword);
+                        registerViewModel.User.UserPassword = _cipherService.Encrypt(registerViewModel.User.UserPassword);
                         registerViewModel.User.UserName = registerViewModel.User.UserName.ToUpper();
                         registerViewModel.User.UserSurname = registerViewModel.User.UserSurname.ToUpper();
                         await _unitOfWorkUser.RepositoryUser.CreateAsync(registerViewModel.User);
                         await _unitOfWorkUser.CompleteAsync();
+
+                        UserRole userRole = new()
+                        {
+                            UserID = registerViewModel.User.UserID,
+                            RoleGroupID = 1,
+                            Roles = 3
+                        };
+                        await _unitOfWorkUserRole.RepositoryUserRole.CreateAsync(userRole);
+                        await _unitOfWorkUserRole.CompleteAsync();
                         return Ok(new CustomOk(true, "Your registration has been successfully received.", "nullObject"));
                     }
                 }

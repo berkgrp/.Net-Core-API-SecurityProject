@@ -1,0 +1,17 @@
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\ServiceLayer\bin\Debug\net5.0\ServiceLayer.deps.json
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\ServiceLayer\bin\Debug\net5.0\ServiceLayer.dll
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\ServiceLayer\bin\Debug\net5.0\ref\ServiceLayer.dll
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\ServiceLayer\bin\Debug\net5.0\ServiceLayer.pdb
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\ServiceLayer\bin\Debug\net5.0\DataAccessLayer.dll
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\ServiceLayer\bin\Debug\net5.0\EntityLayer.dll
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\ServiceLayer\bin\Debug\net5.0\DataAccessLayer.pdb
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\ServiceLayer\bin\Debug\net5.0\EntityLayer.pdb
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\ServiceLayer\obj\Debug\net5.0\ServiceLayer.csproj.AssemblyReference.cache
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\ServiceLayer\obj\Debug\net5.0\ServiceLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\ServiceLayer\obj\Debug\net5.0\ServiceLayer.AssemblyInfoInputs.cache
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\ServiceLayer\obj\Debug\net5.0\ServiceLayer.AssemblyInfo.cs
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\ServiceLayer\obj\Debug\net5.0\ServiceLayer.csproj.CoreCompileInputs.cache
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\ServiceLayer\obj\Debug\net5.0\ServiceLayer.csproj.CopyComplete
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\ServiceLayer\obj\Debug\net5.0\ServiceLayer.dll
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\ServiceLayer\obj\Debug\net5.0\ref\ServiceLayer.dll
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\ServiceLayer\obj\Debug\net5.0\ServiceLayer.pdb

@@ -1,61 +1,64 @@
-﻿using DataAccessLayer;
-using EntityLayer.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.AspNetCore.Mvc.Filters;
+using ServiceLayer.Models;
+using ServiceLayer.RoleAttributes;
+using ServiceLayer.Roles;
+using System;
 using System.Linq;
 
 namespace ApiProject.Helpers
 {
-    public class PermissionFilter
+    public class PermissionFilter : IActionFilter
     {
-        private readonly IUnitOfWork<User> _unitOfWorkUser;
-
-        public PermissionFilter(IUnitOfWork<User> unitOfWorkUser)
+        private readonly IRoleService _roleService;
+        public PermissionFilter(IRoleService roleService)
         {
-            _unitOfWorkUser = unitOfWorkUser;
+            _roleService = roleService;
         }
         public void OnActionExecuting(ActionExecutingContext context)
         {
-            // to make it work out of that filter, they have to send the userID in the header of the request.
-            // when we get to userID of user, we are calling that HasValidRole function in this class.
-            _ = int.TryParse(context.HttpContext.Request.Headers["UserId"].FirstOrDefault(), out int userId);
-            string actionName = context.ActionDescriptor.RouteValues["action"];
-            if (userId != 0 && !HasValidRole(userId, actionName))
+            //Rol kontrolü için kullanıcı bilgisi header'dan alınır
+            Guid userGuidID = Guid.Empty;
+            _=Guid.TryParse(context.HttpContext.Request.Headers["UserGuidId"].FirstOrDefault(),out userGuidID);
+            if (HasRoleAttribute(context))
             {
-                context.Result = new ObjectResult(context.ModelState)
+                try
                 {
-                    Value = "You are not authorized for this page, talk with the admin for the role attributes.",
-                    StatusCode = Microsoft.AspNetCore.Http.StatusCodes.Status403Forbidden
-                };
-                return;
-            }
-        }
-        public bool HasValidRole(int userId, string actionName)
-        {
-            // this function is controlling that user has that role or not by using its userID.
-            // that query is calling the user of that userID. we are using select query because we just want
-            // that user's UserRolesAsString column.
-            var user = _unitOfWorkUser.RepositoryUser.IsUserHasThatRole(userId);
-            if (user.Count != 0) // because of .ToList(); action, we know that it can't be null.
-            {
-                if (user.ElementAt(0).UserRolesAsString.Contains(actionName))
-                {
-                    return true;
+                    var arguments = ((ControllerActionDescriptor)context.ActionDescriptor)
+                        .MethodInfo.CustomAttributes.FirstOrDefault(fd => fd.AttributeType == typeof(RoleAttribute))
+                        .ConstructorArguments;
+
+                    int roleGroupID = (int)arguments[0].Value;
+                    Int64 roleID = (Int64)arguments[1].Value;
+                    RoleModel role = _roleService.GetRoleById(userGuidID, roleGroupID, roleID).Entity;
+                    if (role == null || role.Id == 0)
+                    {
+                        context.Result = new ObjectResult(context.ModelState)
+                        {
+                            Value = "You are not authorized for this page, talk with the admin for the role attributes.",
+                            StatusCode = Microsoft.AspNetCore.Http.StatusCodes.Status403Forbidden
+                        };
+                        return;
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    return false;
+                    Console.WriteLine(ex.Message);
                 }
-            }
-            else
-            {
-                return false;
             }
         }
 
         public void OnActionExecuted(ActionExecutedContext context)
         {
             return;
+        }
+
+        public bool HasRoleAttribute(FilterContext context)
+        {
+            return ((ControllerActionDescriptor)context.ActionDescriptor)
+                .MethodInfo.CustomAttributes.Any(filterDescriptors =>
+                filterDescriptors.AttributeType == typeof(RoleAttribute));
         }
     }
 }

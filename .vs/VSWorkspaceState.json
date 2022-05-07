@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\NetCoreSecurityProject"
+    "\\NetCoreSecurityProject",
+    "\\NetCoreSecurityProject\\ApiProject",
+    "\\NetCoreSecurityProject\\ApiProject\\Controllers",
+    "\\NetCoreSecurityProject\\DataAccessLayer"
   ],
   "SelectedNode": "\\NetCoreSecurityProject\\NetCoreSecurityProject.sln",
   "PreviewInSolutionExplorer": false

@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "b4021c84-77d5-4356-8fc5-ea2dbd1bf6d4": {
+      "ProjectGuid": "b4021c84-77d5-4356-8fc5-ea2dbd1bf6d4",
+      "DisplayName": "DataAccessLayer",
+      "ColorIndex": 0
+    },
+    "2f52153c-95c9-4128-9e85-8edae023ed1e": {
+      "ProjectGuid": "2f52153c-95c9-4128-9e85-8edae023ed1e",
+      "DisplayName": "ApiProject",
+      "ColorIndex": 1
+    },
+    "9d4185bb-4e3e-4c8e-8c7a-fca5e00c6fe7": {
+      "ProjectGuid": "9d4185bb-4e3e-4c8e-8c7a-fca5e00c6fe7",
+      "DisplayName": "EntityLayer",
+      "ColorIndex": 2
+    },
+    "fc6b9785-1f12-4f94-b387-da2d963e1d2b": {
+      "ProjectGuid": "fc6b9785-1f12-4f94-b387-da2d963e1d2b",
+      "DisplayName": "CORE_HBKSOFTWARE",
+      "ColorIndex": 3
+    },
+    "c2e928d9-f43f-4562-9ce3-12da6ae85fce": {
+      "ProjectGuid": "c2e928d9-f43f-4562-9ce3-12da6ae85fce",
+      "DisplayName": "BusinessLayer",
+      "ColorIndex": 4
+    },
+    "96ff58f0-34ca-4499-8345-c5b573de36cb": {
+      "ProjectGuid": "96ff58f0-34ca-4499-8345-c5b573de36cb",
+      "DisplayName": "ServiceLayer",
+      "ColorIndex": 5
+    }
+  },
+  "NextColorIndex": 6
+}

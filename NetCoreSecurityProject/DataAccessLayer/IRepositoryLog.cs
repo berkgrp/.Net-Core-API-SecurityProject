@@ -10,6 +10,5 @@ namespace DataAccessLayer
     public class RepositoryLog<T> : Repository<Log>, IRepositoryLog<T>
     {
         public RepositoryLog(ApiDbContext context) : base(context) { }
-
     }
 }

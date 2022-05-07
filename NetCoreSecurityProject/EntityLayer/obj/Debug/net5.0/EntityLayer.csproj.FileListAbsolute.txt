@@ -22,3 +22,17 @@ C:\Users\Eda GARİP\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecuri
 C:\Users\Eda GARİP\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\EntityLayer\obj\Debug\net5.0\refint\EntityLayer.dll
 C:\Users\Eda GARİP\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\EntityLayer\obj\Debug\net5.0\EntityLayer.pdb
 C:\Users\Eda GARİP\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\EntityLayer\obj\Debug\net5.0\ref\EntityLayer.dll
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\EntityLayer\bin\Debug\net5.0\EntityLayer.deps.json
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\EntityLayer\bin\Debug\net5.0\EntityLayer.runtimeconfig.json
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\EntityLayer\bin\Debug\net5.0\EntityLayer.runtimeconfig.dev.json
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\EntityLayer\bin\Debug\net5.0\EntityLayer.dll
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\EntityLayer\bin\Debug\net5.0\ref\EntityLayer.dll
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\EntityLayer\bin\Debug\net5.0\EntityLayer.pdb
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\EntityLayer\obj\Debug\net5.0\EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\EntityLayer\obj\Debug\net5.0\EntityLayer.AssemblyInfoInputs.cache
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\EntityLayer\obj\Debug\net5.0\EntityLayer.AssemblyInfo.cs
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\EntityLayer\obj\Debug\net5.0\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\EntityLayer\obj\Debug\net5.0\EntityLayer.dll
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\EntityLayer\obj\Debug\net5.0\ref\EntityLayer.dll
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\EntityLayer\obj\Debug\net5.0\EntityLayer.pdb
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\EntityLayer\obj\Debug\net5.0\EntityLayer.genruntimeconfig.cache

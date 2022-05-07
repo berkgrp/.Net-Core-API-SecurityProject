@@ -2,15 +2,16 @@
 using ApiProject.Helpers;
 using DataAccessLayer;
 using EntityLayer.Models;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using ServiceLayer.RoleAttributes;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
+using static ServiceLayer.Enums.Enums;
 
 namespace ApiProject.Controllers
 {
-    [Authorize]//Classic Auth Policies
+    //[Authorize]//Classic Auth Policies
     [ApiController]
     [Route("[controller]")]
     [RequestSizeLimit(5242880)]//We are limiting the body size as kb
@@ -33,6 +34,8 @@ namespace ApiProject.Controllers
 
         #region /*Get*/
         [HttpGet]
+        [ServiceFilter(typeof(PermissionFilter))]
+        [RoleAttribute((int)ServiceLayer.Enums.Enums.RoleGroup.User, (Int64)UserRoles.Get)]
         public async Task<IActionResult> Get()
         {
             try
@@ -58,6 +61,8 @@ namespace ApiProject.Controllers
 
         #region /*GetByID*/
         [HttpGet("{id}")]
+        [ServiceFilter(typeof(PermissionFilter))]
+        [RoleAttribute((int)ServiceLayer.Enums.Enums.RoleGroup.User, (Int64)UserRoles.GetUser)]
         public async Task<ActionResult> Get(Guid id)
         {
             try
@@ -93,6 +98,8 @@ namespace ApiProject.Controllers
         #region /*Post*/
         [RequestSizeLimit(5242880)]
         [HttpPost]
+        [ServiceFilter(typeof(PermissionFilter))]
+        [RoleAttribute((int)ServiceLayer.Enums.Enums.RoleGroup.User, (Int64)UserRoles.Post)]
         public async Task<ActionResult> Post([FromBody] User user)
         {
             try
@@ -121,6 +128,8 @@ namespace ApiProject.Controllers
         #region /*Update*/
         [HttpPut]
         [RequestSizeLimit(5242880)]
+        [ServiceFilter(typeof(PermissionFilter))]
+        [RoleAttribute((int)ServiceLayer.Enums.Enums.RoleGroup.User, (Int64)UserRoles.Update)]
         public async Task<ActionResult> Update([FromBody] User user)
         {
             try

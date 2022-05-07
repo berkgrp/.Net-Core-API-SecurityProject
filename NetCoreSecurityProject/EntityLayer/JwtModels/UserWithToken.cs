@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Entities_HBKSOFTWARE.JwtModels
 {
@@ -9,6 +10,6 @@ namespace Entities_HBKSOFTWARE.JwtModels
 
         public string RefreshToken { get; set; }
 
-        public int UserID { get; set; }
+        public Guid UserGuidID { get; set; }
     }
 }

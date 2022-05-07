@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLayer", "BusinessLa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiProject", "ApiProject\ApiProject.csproj", "{2F52153C-95C9-4128-9E85-8EDAE023ED1E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CORE_HBKSOFTWARE", "..\..\CORE_HBKSOFTWARE\CORE_HBKSOFTWARE.csproj", "{FC6B9785-1F12-4F94-B387-DA2D963E1D2B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceLayer", "ServiceLayer\ServiceLayer.csproj", "{96FF58F0-34CA-4499-8345-C5B573DE36CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{2F52153C-95C9-4128-9E85-8EDAE023ED1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F52153C-95C9-4128-9E85-8EDAE023ED1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F52153C-95C9-4128-9E85-8EDAE023ED1E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FC6B9785-1F12-4F94-B387-DA2D963E1D2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FC6B9785-1F12-4F94-B387-DA2D963E1D2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FC6B9785-1F12-4F94-B387-DA2D963E1D2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FC6B9785-1F12-4F94-B387-DA2D963E1D2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96FF58F0-34CA-4499-8345-C5B573DE36CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96FF58F0-34CA-4499-8345-C5B573DE36CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96FF58F0-34CA-4499-8345-C5B573DE36CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96FF58F0-34CA-4499-8345-C5B573DE36CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

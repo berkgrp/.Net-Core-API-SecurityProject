@@ -1,4 +1,5 @@
-﻿using AspNetCoreRateLimit;
+﻿using ApiProject.Helpers;
+using AspNetCoreRateLimit;
 using BusinessLayer;
 using DataAccessLayer;
 using Entities_HBKSOFTWARE.JwtModels;
@@ -11,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using ServiceLayer.Roles;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -83,6 +85,11 @@ namespace ApiProject
             });
             // Auth
 
+            services.AddSingleton<IBiggerToLower, BiggerToLower>();
+            services.AddSingleton<ICipherService, Security>();
+            services.AddSingleton<JWTSettings>();
+            services.AddTransient<IRoleService, RoleService>();
+            services.AddScoped<PermissionFilter>();
             services.AddScoped(typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
             services.AddDbContext<ApiDbContext>();
             services.AddControllers();
@@ -104,7 +111,7 @@ namespace ApiProject
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ApiDbContext db)
         {
             if (env.IsDevelopment())
             {
@@ -112,6 +119,8 @@ namespace ApiProject
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "SecurityProject v1"));
             }
+
+            db.Database.EnsureCreated();    
 
             app.UseHttpsRedirection();
             app.UseIpRateLimiting();//to limit requests by count.

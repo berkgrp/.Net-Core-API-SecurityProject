@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\ApiProject\\ApiProject.csproj": {}
+    "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\ApiProject\\ApiProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\ApiProject\\ApiProject.csproj": {
+    "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\ApiProject\\ApiProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\ApiProject\\ApiProject.csproj",
+        "projectUniqueName": "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\ApiProject\\ApiProject.csproj",
         "projectName": "ApiProject",
-        "projectPath": "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\ApiProject\\ApiProject.csproj",
-        "packagesPath": "C:\\Users\\Eda GARİP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\ApiProject\\obj\\",
+        "projectPath": "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\ApiProject\\ApiProject.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\ApiProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Eda GARİP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,11 +28,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\BusinessLayer\\BusinessLayer.csproj": {
-                "projectPath": "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\BusinessLayer\\BusinessLayer.csproj"
+              "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\BusinessLayer\\BusinessLayer.csproj": {
+                "projectPath": "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\BusinessLayer\\BusinessLayer.csproj"
               },
-              "C:\\Users\\Eda GARİP\\Documents\\Github\\CORE_HBKSOFTWARE\\CORE_HBKSOFTWARE.csproj": {
-                "projectPath": "C:\\Users\\Eda GARİP\\Documents\\Github\\CORE_HBKSOFTWARE\\CORE_HBKSOFTWARE.csproj"
+              "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\ServiceLayer\\ServiceLayer.csproj": {
+                "projectPath": "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\ServiceLayer\\ServiceLayer.csproj"
               }
             }
           }
@@ -55,6 +55,12 @@
               "target": "Package",
               "version": "[5.0.15, )"
             },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
@@ -72,20 +78,8 @@
           "warn": true,
           "downloadDependencies": [
             {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            },
-            {
               "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[5.0.16, 5.0.16]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
+              "version": "[5.0.12, 5.0.12]"
             }
           ],
           "frameworkReferences": {
@@ -96,21 +90,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\BusinessLayer\\BusinessLayer.csproj": {
+    "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\BusinessLayer\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\BusinessLayer\\BusinessLayer.csproj",
+        "projectUniqueName": "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\BusinessLayer\\BusinessLayer.csproj",
         "projectName": "BusinessLayer",
-        "projectPath": "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\BusinessLayer\\BusinessLayer.csproj",
-        "packagesPath": "C:\\Users\\Eda GARİP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\BusinessLayer\\obj\\",
+        "projectPath": "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\BusinessLayer\\BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Eda GARİP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -124,11 +118,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\DataAccessLayer\\DataAccessLayer.csproj"
+              "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\DataAccessLayer\\DataAccessLayer.csproj"
               },
-              "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\EntityLayer\\EntityLayer.csproj": {
-                "projectPath": "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\EntityLayer\\EntityLayer.csproj"
+              "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\EntityLayer\\EntityLayer.csproj": {
+                "projectPath": "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\EntityLayer\\EntityLayer.csproj"
               }
             }
           }
@@ -152,40 +146,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\DataAccessLayer\\DataAccessLayer.csproj",
-        "packagesPath": "C:\\Users\\Eda GARİP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\DataAccessLayer\\obj\\",
+        "projectPath": "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\DataAccessLayer\\DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Eda GARİP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -199,8 +179,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\EntityLayer\\EntityLayer.csproj": {
-                "projectPath": "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\EntityLayer\\EntityLayer.csproj"
+              "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\EntityLayer\\EntityLayer.csproj": {
+                "projectPath": "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\EntityLayer\\EntityLayer.csproj"
               }
             }
           }
@@ -230,40 +210,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\EntityLayer\\EntityLayer.csproj": {
+    "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\EntityLayer\\EntityLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\EntityLayer\\EntityLayer.csproj",
+        "projectUniqueName": "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\EntityLayer\\EntityLayer.csproj",
         "projectName": "EntityLayer",
-        "projectPath": "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\EntityLayer\\EntityLayer.csproj",
-        "packagesPath": "C:\\Users\\Eda GARİP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eda GARİP\\Documents\\GitHub\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\EntityLayer\\obj\\",
+        "projectPath": "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\EntityLayer\\EntityLayer.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\EntityLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Eda GARİP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -296,6 +262,12 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.15, )"
             }
           },
           "imports": [
@@ -308,53 +280,43 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Eda GARİP\\Documents\\GitHub\\CORE_HBKSOFTWARE\\CORE_HBKSOFTWARE.csproj": {
+    "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\ServiceLayer\\ServiceLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eda GARİP\\Documents\\GitHub\\CORE_HBKSOFTWARE\\CORE_HBKSOFTWARE.csproj",
-        "projectName": "CORE_HBKSOFTWARE",
-        "projectPath": "C:\\Users\\Eda GARİP\\Documents\\GitHub\\CORE_HBKSOFTWARE\\CORE_HBKSOFTWARE.csproj",
-        "packagesPath": "C:\\Users\\Eda GARİP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eda GARİP\\Documents\\GitHub\\CORE_HBKSOFTWARE\\obj\\",
+        "projectUniqueName": "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\ServiceLayer\\ServiceLayer.csproj",
+        "projectName": "ServiceLayer",
+        "projectPath": "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\ServiceLayer\\ServiceLayer.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\ServiceLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Eda GARİP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Projects\\VisualStudioProjects\\.Net-Core-API-SecurityProject\\NetCoreSecurityProject\\DataAccessLayer\\DataAccessLayer.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -364,38 +326,8 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
-          "dependencies": {
-            "MailKit": {
-              "target": "Package",
-              "version": "[2.11.1, )"
-            },
-            "Microsoft.AspNetCore.Http.Features": {
-              "target": "Package",
-              "version": "[5.0.4, )"
-            },
-            "Microsoft.Extensions.Configuration": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            },
-            "Microsoft.Extensions.Configuration.Json": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            },
-            "MimeKit": {
-              "target": "Package",
-              "version": "[2.11.0, )"
-            },
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[12.0.3, )"
-            },
-            "SixLabors.ImageSharp": {
-              "target": "Package",
-              "version": "[1.0.3, )"
-            }
-          },
+        "net5.0": {
+          "targetAlias": "net5.0",
           "imports": [
             "net461",
             "net462",
@@ -406,26 +338,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.10, 3.1.10]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

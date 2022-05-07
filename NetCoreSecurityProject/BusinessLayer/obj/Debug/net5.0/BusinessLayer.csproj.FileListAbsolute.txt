@@ -32,3 +32,20 @@ C:\Users\Eda GARİP\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecuri
 C:\Users\Eda GARİP\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\BusinessLayer\obj\Debug\net5.0\refint\BusinessLayer.dll
 C:\Users\Eda GARİP\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\BusinessLayer\obj\Debug\net5.0\BusinessLayer.pdb
 C:\Users\Eda GARİP\Documents\GitHub\.Net-Core-API-SecurityProject\NetCoreSecurityProject\BusinessLayer\obj\Debug\net5.0\ref\BusinessLayer.dll
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\BusinessLayer\bin\Debug\net5.0\BusinessLayer.deps.json
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\BusinessLayer\bin\Debug\net5.0\BusinessLayer.dll
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\BusinessLayer\bin\Debug\net5.0\ref\BusinessLayer.dll
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\BusinessLayer\bin\Debug\net5.0\BusinessLayer.pdb
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\BusinessLayer\bin\Debug\net5.0\DataAccessLayer.dll
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\BusinessLayer\bin\Debug\net5.0\EntityLayer.dll
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\BusinessLayer\bin\Debug\net5.0\DataAccessLayer.pdb
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\BusinessLayer\bin\Debug\net5.0\EntityLayer.pdb
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\BusinessLayer\obj\Debug\net5.0\BusinessLayer.csproj.AssemblyReference.cache
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\BusinessLayer\obj\Debug\net5.0\BusinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\BusinessLayer\obj\Debug\net5.0\BusinessLayer.AssemblyInfoInputs.cache
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\BusinessLayer\obj\Debug\net5.0\BusinessLayer.AssemblyInfo.cs
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\BusinessLayer\obj\Debug\net5.0\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\BusinessLayer\obj\Debug\net5.0\BusinessLayer.csproj.CopyComplete
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\BusinessLayer\obj\Debug\net5.0\BusinessLayer.dll
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\BusinessLayer\obj\Debug\net5.0\ref\BusinessLayer.dll
+C:\Projects\VisualStudioProjects\.Net-Core-API-SecurityProject\NetCoreSecurityProject\BusinessLayer\obj\Debug\net5.0\BusinessLayer.pdb

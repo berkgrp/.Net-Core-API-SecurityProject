@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace EntityLayer.Models
 {
@@ -37,7 +38,8 @@ namespace EntityLayer.Models
 
         public virtual List<RefreshToken> RefreshTokens { get; set; }
 
-        public List<string> UserRolesAsString { get; set; } = new List<string>();
+        [JsonIgnore]
+        public virtual ICollection<UserRole> UserRoles { get; set; }
     }
 
     public class UserConfiguration : IEntityTypeConfiguration<User>
@@ -46,29 +48,22 @@ namespace EntityLayer.Models
         {
             builder.HasKey(user => user.UserID);//Primary Key Yapılandırması
 
-            builder.Property(x => x.UserRolesAsString)
-                   .HasConversion(new ValueConverter<List<string>, string>(
-                    v => Newtonsoft.Json.JsonConvert.SerializeObject(v),
-                    v => Newtonsoft.Json.JsonConvert.DeserializeObject<List<string>>(v)));
-
             //Data Seeding
             builder.HasData(new User
             {
                 UserID = 1,
                 UserName = "Admin",
                 UserSurname = "Admin",
-                UserPassword = "AdminGitHub",
+                UserPassword = "CfDJ8E2g0tyToKBIorFTKMYz8oPTSA3c-MsZ06mFLAKsWpmoPPIfS1voqv2EdJ93wragYJn4vhYdKxJMQDQmnxWcFlaVauYDtA0MmRjVe55gNkAuP02MqWhA1OWm7qG5VrVq1g",//AdminGitHub
                 UserEmail = "AdminPaneli@gmail.com",
-                UserRolesAsString = { "Get" }
             });
             builder.HasData(new User
             {
                 UserID = 2,
                 UserName = "Kullanici",
                 UserSurname = "Kullanici",
-                UserPassword = "KullaniciGitHub",
+                UserPassword = "CfDJ8E2g0tyToKBIorFTKMYz8oOKphk8vXOSJMpPmG2PSySdPXezpmXkpilJS7CpsPOwvzzcRavxb1wQlH71D3XsVc6Nkg-WKwTJyAjqi6CLjGiot3trnuefW6iASirXW7B2dw",//KullaniciGitHub
                 UserEmail = "Kullanici@gmail.com",
-                UserRolesAsString = { "Get" }
             });
         }
     }

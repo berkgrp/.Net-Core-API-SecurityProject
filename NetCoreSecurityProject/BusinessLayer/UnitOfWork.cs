@@ -16,11 +16,17 @@ namespace BusinessLayer
             RepositoryUser = new RepositoryUser<T>(_context);
             RepositoryLog = new RepositoryLog<T>(_context);
             RepositoryRefreshToken = new RepositoryRefreshToken<T>(_context);
+            RepositoryRole = new RepositoryRole<T>(_context);
+            RepositoryRoleGroup = new RepositoryRoleGroup<T>(_context);
+            RepositoryUserRole = new RepositoryUserRole<T>(_context);
         }
         public IRepository<T> Repository { get; private set; }
         public IRepositoryUser<T> RepositoryUser { get; private set; }
         public IRepositoryLog<T> RepositoryLog { get; private set; }
         public IRepositoryRefreshToken<T> RepositoryRefreshToken { get; private set; }
+        public IRepositoryRole<T> RepositoryRole { get; private set; }
+        public IRepositoryRoleGroup<T> RepositoryRoleGroup { get; private set; }
+        public IRepositoryUserRole<T> RepositoryUserRole { get; private set; }
 
         public int Complete()
         {
