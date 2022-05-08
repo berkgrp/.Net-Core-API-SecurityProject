@@ -2,10 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\NetCoreSecurityProject",
-    "\\NetCoreSecurityProject\\ApiProject",
     "\\NetCoreSecurityProject\\ApiProject\\Controllers",
-    "\\NetCoreSecurityProject\\DataAccessLayer"
+    "\\NetCoreSecurityProject\\EntityLayer\\Models",
+    "\\NetCoreSecurityProject\\ServiceLayer",
+    "\\NetCoreSecurityProject\\ServiceLayer\\Roles"
   ],
-  "SelectedNode": "\\NetCoreSecurityProject\\NetCoreSecurityProject.sln",
+  "SelectedNode": "\\NetCoreSecurityProject\\ServiceLayer\\Roles\\RoleService.cs",
   "PreviewInSolutionExplorer": false
 }

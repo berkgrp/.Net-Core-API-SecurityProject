@@ -2,6 +2,7 @@
 using ApiProject.Helpers;
 using DataAccessLayer;
 using EntityLayer.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ServiceLayer.RoleAttributes;
 using System;
@@ -11,7 +12,7 @@ using static ServiceLayer.Enums.Enums;
 
 namespace ApiProject.Controllers
 {
-    //[Authorize]//Classic Auth Policies
+    [Authorize]//Classic Auth Policies
     [ApiController]
     [Route("[controller]")]
     [RequestSizeLimit(5242880)]//We are limiting the body size as kb

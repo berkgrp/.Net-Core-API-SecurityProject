@@ -45,7 +45,7 @@ namespace ApiProject
                 {
                     new RateLimitRule
                     {
-                        Endpoint = "*", //Custom rule belirlenecek ise config kopyalanıp endpoint değiştirilir. Örn: POST:/api/Account/Login
+                        Endpoint = "*", 
                         Period = "10s",
                         Limit = 5,
                     }
@@ -125,7 +125,7 @@ namespace ApiProject
             app.UseHttpsRedirection();
             app.UseIpRateLimiting();//to limit requests by count.
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
